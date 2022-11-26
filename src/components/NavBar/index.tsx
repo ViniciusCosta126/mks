@@ -16,7 +16,7 @@ export const NavBar = () => {
             <TiShoppingCart size={24}/>
             <p>0</p>
         </C.ContainerButton>
-        <Cart cartVisible={cartVisible}/>
+        <Cart cartVisible={cartVisible} handleCart={handleCart}/>
     </C.Navbar>
   )
 }

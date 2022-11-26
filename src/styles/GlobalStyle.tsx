@@ -10,4 +10,5 @@ export const Global = createGlobalStyle`
     body{
         height: 100vh;
     }
+    
 `
