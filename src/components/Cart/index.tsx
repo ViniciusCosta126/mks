@@ -2,11 +2,14 @@ import React from 'react'
 import * as C from "./styles"
 import {AiOutlineClose} from 'react-icons/ai'
 import { ItemCart } from '../ItemCart'
+import { useAppSelector } from '../../store/hooks'
 interface CartProps {
   cartVisible:Boolean
   handleCart:()=> void
 }
 export const Cart= ({cartVisible,handleCart}:CartProps) => {
+  const cart = useAppSelector((state)=>state.cart)
+  
   return (
     <C.ContainerCart cartVisible={cartVisible}>
       <C.ContainerTitle>
@@ -16,8 +19,12 @@ export const Cart= ({cartVisible,handleCart}:CartProps) => {
         </div>
       </C.ContainerTitle>
       <C.ContainerItens>
-        <ItemCart/>
-        <ItemCart/>
+
+        {cart.length !== 0 ? cart.map(item=>{
+          return <ItemCart key={item.product.id} item={item}/>
+        }):
+        ""
+        }
       </C.ContainerItens>
       <C.TotalContainer>
         <p>Total:</p>
