@@ -1,7 +1,6 @@
 import React from "react";
 import * as C from "./style";
 import Image from "next/image";
-import imgTeste from "./shopping.webp";
 import { FiShoppingBag } from "react-icons/fi";
 import { useAppDispatch } from "../../store/hooks";
 import { addToCart } from "../../store/cartSlice";
@@ -14,7 +13,7 @@ interface ProductProps {
     brand: String;
     description: String;
     photo: String;
-    price: String;
+    price: string;
   };
 }
 export const CardItem = ({ product }: ProductProps) => {
@@ -27,6 +26,7 @@ export const CardItem = ({ product }: ProductProps) => {
     };
     dispactch(addToCart(newItem))
   };
+  
   return (
     <C.CardContainer>
       <C.ContentContainer>
@@ -38,7 +38,7 @@ export const CardItem = ({ product }: ProductProps) => {
         />
         <C.TitleValueContainer>
           <h3>{product.name}</h3>
-          <div className="value">R${product.price}</div>
+          <div className="value">R${parseInt(product.price)}</div>
         </C.TitleValueContainer>
         <p className="description">{product.description}</p>
       </C.ContentContainer>

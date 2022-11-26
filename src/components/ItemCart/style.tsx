@@ -12,29 +12,33 @@ export const ItemCartContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-top: 14px;
+
   svg {
     position: absolute;
     font-size: 42px;
     right: 5.6%;
     top: 0;
   }
-  @media(min-width: 1024px){
+  @media (min-width: 1024px) {
     flex-direction: row;
     justify-content: space-between;
     overflow: initial;
     margin-top: 28px;
-    svg{
-        width: 18px;
-        height: 18px;
-        border-radius:50%;
-        padding: 2px;
-        background-color: #000;
-        color: #fff;
-        z-index: 10;
-        font-size:14px;
-        right: -8px;
-    top: -6px;
-}
+    svg {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      padding: 2px;
+      background-color: #000;
+      color: #fff;
+      z-index: 10;
+      font-size: 14px;
+      right: -8px;
+      top: -6px;
+    }
+    img {
+      width: 70px;
+      height: 70px;
     }
   }
 `;
@@ -54,11 +58,23 @@ export const ContainerCotent = styled.div`
     .qtd-btn {
       display: flex;
       width: 45%;
+      position: relative;
       align-items: center;
       border: 0.3px solid #bfbfbf;
       border-radius: 4px;
       height: 35px;
-      overflow: hidden;
+
+      .qtd-label {
+        display: none;
+        position: absolute;
+        top: -10px;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 6px;
+        @media(min-width:1024px){
+          display: block;
+        }
+      }
       button,
       p {
         width: 34%;
@@ -85,26 +101,33 @@ export const ContainerCotent = styled.div`
       background-color: #373737;
       border-radius: 5px;
       width: 45%;
-      padding: 8px 16px;
+      padding: 8px 6px;
       text-align: center;
       font-weight: 700;
-      font-size: 15px;
+      font-size: 14px;
       line-height: 15px;
       color: #ffffff;
     }
   }
-  @media(min-width:1024px){
+  @media (min-width: 1024px) {
     display: flex;
-    .title-product{
-        width: 40%;
-        margin-left: 20px;
+    flex: 1;
+    .title-product {
+      width: 40%;
+      margin-left: 20px;
     }
     .butons-container {
-        flex: 1;
-        .value{
-            width: 48%;
-            margin-left: 20px;
-        }
+      flex: 1;
+      .value {
+        width: 40%;
+        margin-left: 20px;
+        padding: 0;
+        background-color: #fff;
+        color: #000;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+      }
     }
   }
 `;

@@ -19,11 +19,13 @@ export default function Home({products}:ProductProps) {
       <Head>
         <title>Mks Desenvolvimento</title>      
       </Head>
+      <C.ContainerPrincipal>
       <NavBar/>
       <C.ContainerMain>
       <GridCards products={products}/>
       </C.ContainerMain>
       <Footer/>
+      </C.ContainerPrincipal>
     </div>
   )
 }

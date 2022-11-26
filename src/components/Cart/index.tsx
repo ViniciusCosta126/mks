@@ -3,6 +3,7 @@ import * as C from "./styles"
 import {AiOutlineClose} from 'react-icons/ai'
 import { ItemCart } from '../ItemCart'
 import { useAppSelector } from '../../store/hooks'
+import { somarItens } from '../../util/somarTudo'
 interface CartProps {
   cartVisible:Boolean
   handleCart:()=> void
@@ -28,7 +29,7 @@ export const Cart= ({cartVisible,handleCart}:CartProps) => {
       </C.ContainerItens>
       <C.TotalContainer>
         <p>Total:</p>
-        <p>R$798</p>
+        <p>R${somarItens(cart)}</p>
       </C.TotalContainer>
 
       <C.ButtonFinishi>Finalizar Compra</C.ButtonFinishi>
