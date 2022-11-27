@@ -12,5 +12,4 @@ export interface ProductProps{
     products:IProducts[]
 }
   
-//how to declare a type with typescript?
   

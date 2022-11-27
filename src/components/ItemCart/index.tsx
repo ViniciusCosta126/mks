@@ -26,18 +26,17 @@ export const ItemCart = ({item}:ItemCartProps) => {
     dispactch(addQtdItemCart(id))
   }
   return  (
-    <C.ItemCartContainer>
+    <C.ItemCartContainer data-testid="itemCart">
         <AiOutlineClose onClick={()=>handleRemove(item.product.id)}/>
         <Image width={100} alt="qua" height={100} src={item.product.photo}/>
         <C.ContainerCotent>
           <p className='title-product'>{item.product.name}</p>
-
           <div className="butons-container">
             <div className='qtd-btn'>
               <span className='qtd-label'>Qtd:</span>
-              <button onClick={()=>handleRemoveQtdItem(item.product.id)}>-</button>
-              <p>{item.qtd}</p>
-              <button onClick={()=>handleAddQtdItem(item.product.id)}>+</button>
+              <button onClick={()=>handleRemoveQtdItem(item.product.id)} data-testid="removeQtd">-</button>
+              <p data-testid="qtd">{item.qtd}</p>
+              <button onClick={()=>handleAddQtdItem(item.product.id)}data-testid="addQtd">+</button>
             </div>
             <div className='value'>
               R${parseInt(item.product.price)}

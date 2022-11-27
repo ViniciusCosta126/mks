@@ -16,7 +16,7 @@ export const Cart= ({cartVisible,handleCart}:CartProps) => {
       <C.ContainerTitle>
         <h3>Carrinho <br/>de compras</h3>
         <div>
-          <AiOutlineClose onClick={handleCart}/>
+          <AiOutlineClose onClick={handleCart} data-testid="btnClose"/>
         </div>
       </C.ContainerTitle>
       <C.ContainerItens>

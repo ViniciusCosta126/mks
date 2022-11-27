@@ -8,7 +8,7 @@ import { IProducts } from "../../Types/Product";
 
 interface ProductProps {
   product: {
-    id: Number;
+    id: number;
     name: String;
     brand: String;
     description: String;
@@ -42,7 +42,7 @@ export const CardItem = ({ product }: ProductProps) => {
         </C.TitleValueContainer>
         <p className="description">{product.description}</p>
       </C.ContentContainer>
-      <C.BtnBuy onClick={()=>{handleAdd(product,1)}}>
+      <C.BtnBuy onClick={()=>{handleAdd(product,1)}} data-testid="btnComprar">
         <FiShoppingBag />
         <p>comprar</p>
       </C.BtnBuy>

@@ -19,12 +19,12 @@ export const NavBar = () => {
     setCartItens(totalItens)
   },[cart])
   return (
-    <C.Navbar>
+    <C.Navbar data-testid="navBar">
       <C.Title>
         mks <span>sistemas</span>
       </C.Title>
       <C.ContainerButton onClick={handleCart}>
-        <TiShoppingCart size={24} />
+        <TiShoppingCart size={24} data-testid="btnCart" />
         <p>{cartItens}</p>
       </C.ContainerButton>
       <Cart cartVisible={cartVisible} handleCart={handleCart} />
