@@ -12,7 +12,7 @@ interface ProductProps {
     name: String;
     brand: String;
     description: String;
-    photo: String;
+    photo: string;
     price: string;
   };
 }

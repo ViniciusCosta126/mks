@@ -5,7 +5,7 @@ export interface  IProducts{
     name:String,
     brand:String,
     description:String,
-    photo:String,
+    photo:string,
     price:string
 }
 export interface ProductProps{
